@@ -11,6 +11,7 @@ return [
         'auth/home',
     ],
     'layouts/internal' => [
-        'user/index'
+        'user/index',
+        'home/index',
     ]
 ];

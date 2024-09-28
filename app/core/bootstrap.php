@@ -1,12 +1,16 @@
 <?php
 
 function dd(...$args) {
-    ob_clean();
-    echo "<pre>";
+    
+    @ob_clean();
+
+    if(php_sapi_name() != 'cli') echo "<pre>";
+    
     foreach($args as $arg) {
         var_dump($arg);
     }
-    echo "</pre>";
+    
+    if(php_sapi_name() != 'cli') echo "</pre>";
     die;
 }
 
@@ -21,5 +25,3 @@ spl_autoload_register(function ($class)
         require_once $file;
     }
 });
-
-include __DIR__ . "/../config/error_handler.php";
