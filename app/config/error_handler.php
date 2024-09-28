@@ -2,6 +2,7 @@
 
 use Controllers\SingeloController;
 use Core\Exceptions\ClientException;
+use Core\Exceptions\NotAllowedException;
 use Core\Exceptions\NotFoundException;
 use Core\Exceptions\SingeloException;
 
@@ -11,6 +12,8 @@ try {
     SingeloController::clientException($ex);
 } catch(NotFoundException $ex) {
     SingeloController::notFoundException($ex);
+} catch(NotAllowedException $ex) {
+    SingeloController::notAllowedException($ex);
 } catch(SingeloException $ex) {
     SingeloController::singeloException($ex);
 }

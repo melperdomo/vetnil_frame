@@ -34,10 +34,18 @@ class SingeloController
         $method = Request::getMethod();
         $uri = Request::getUri();
 
-        header("HTTP/1.1 404 Not Found");
         View::render("exception/not-found", [
             "ex_code" => $ex->getCode(),
             "ex_msg" => "[$method] \"$uri\" not found",
+            "ex" => $ex
+        ]);
+    }
+
+    public static function notAllowedException(Throwable $ex)
+    {
+        http_response_code(405);
+
+        View::render("exception/not-allowed", [
             "ex" => $ex
         ]);
     }

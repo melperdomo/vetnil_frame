@@ -1,8 +1,12 @@
+<?php use Core\Security; ?>
 <link rel="stylesheet" href="/css/auth/login.css">
 
 <h1>Login</h1>
 
 <form method="post" action="/login">
+
+    <?php Security::csrfInput(); ?>
+
     <fieldset>
         <legend>Enter your credentials</legend>
         <label for="email">E-mail</label>
@@ -15,4 +19,5 @@
 
         <button type="submit">Login</button>
     </fieldset>
+
 </form>

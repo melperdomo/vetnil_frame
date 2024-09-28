@@ -10,11 +10,15 @@ Router::get("/login", function() {
     AuthController::login();
 });
 
-Router::post("/login", function() {
-    AuthController::doLogin();
+Middleware::run(["validateCsrf"], function() {
+
+    Router::post("/login", function() {
+        AuthController::doLogin();
+    });
+
 });
 
-Middleware::run("checkUserSession", function() {
+Middleware::run(["checkUserSession"], function() {
 
     Router::get("/", function() {
         HomeController::index();
