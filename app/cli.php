@@ -1,6 +1,6 @@
 <?php
 
-include __DIR__ . '/../core/bootstrap.php';
+include __DIR__ . '/core/bootstrap.php';
 
 function migrate()
 {
@@ -9,7 +9,7 @@ function migrate()
     $pending_migs = array_diff($file_migs, $done_migs);
 
     foreach($pending_migs as $mig_name) {
-        $mig_path = __DIR__ . "/migrations/$mig_name";
+        $mig_path = __DIR__ . "/database/migrations/$mig_name";
         $mig_file_name = basename($mig_path);
 
         echo $mig_file_name . " migrating\n";
@@ -25,7 +25,7 @@ function rollback($limit = 0)
     $done_migs = getDBMigrations($limit, 'DESC');
     
     foreach($done_migs as $mig_name) {
-        $mig_path = __DIR__ . "/migrations/$mig_name";
+        $mig_path = __DIR__ . "/database/migrations/$mig_name";
         $mig_file_name = basename($mig_path);
 
         echo $mig_file_name . " rollbacking\n";
@@ -57,7 +57,7 @@ function down($migration_file_name)
 function connect()
 {
     try {
-        $db_path = __DIR__ . '/app.db';
+        $db_path = __DIR__ . "/database/app.db";
         $db = new PDO("sqlite:$db_path");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -98,7 +98,7 @@ function getDBMigrations($limit = 0, $sorting = 'ASC')
 function getFileMigrations()
 {
     $list = [];
-    $directory = __DIR__ . '/migrations';
+    $directory = __DIR__ . "/database/migrations";
     $files = glob($directory . '/*.php');
 
     foreach ($files as $file) {

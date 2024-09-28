@@ -8,6 +8,8 @@ class Middleware
 {
     public static function checkUserSession()
     {
+        $user = Session::get("user");
+
         if(empty($user)) {
             Response::redirect("/login");
         }

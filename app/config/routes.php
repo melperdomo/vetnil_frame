@@ -24,6 +24,10 @@ Middleware::run(["checkUserSession"], function() {
         HomeController::index();
     });
 
+    Router::get("/logout", function() {
+        AuthController::logout();
+    });
+
 });
 
 throw new NotFoundException();

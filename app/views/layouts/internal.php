@@ -8,7 +8,12 @@
 </head>
 <body>
     <header>
-        Hello, <?php echo $user->name; ?>!
+        <div>
+            Hello, <?php echo $user->name; ?>!
+        </div>
+        <div>
+            <a href="/logout" class="button primary">Logout</a>
+        </div>
     </header>
     <main>
         <?php include $view_content; ?>

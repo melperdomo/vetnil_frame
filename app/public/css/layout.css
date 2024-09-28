@@ -29,3 +29,9 @@ body > footer {
 body > main {
     flex-grow: 1;
 }
+
+body > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

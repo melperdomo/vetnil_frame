@@ -10,7 +10,7 @@ class HomeController
 {
     public static function index()
     {
-        $user = Session::get('consumer');
+        $user = Session::get('user');
 
         View::render("home/index", [
             'user' => $user

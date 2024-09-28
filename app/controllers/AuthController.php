@@ -4,7 +4,10 @@ namespace Controllers;
 
 use Core\Exceptions\ClientException;
 use Core\Request;
+use Core\Response;
+use Core\Session;
 use Core\View;
+use Models\User;
 
 class AuthController
 {
@@ -26,6 +29,18 @@ class AuthController
             throw new ClientException("Input your password.");
         }
 
-        dd($email, $password);
+        $user = User::findByCredentials($email, $password);
+        if(empty($user)) {
+            throw new ClientException("User not found");
+        }
+
+        Session::set("user", $user);
+        Response::redirect("/");
+    }
+
+    public static function logout()
+    {
+        session_destroy();
+        Response::redirect("/login");
     }
 }
