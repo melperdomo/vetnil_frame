@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        Internal Header
+        Hello, <?php echo $user->name; ?>!
     </header>
     <main>
         <?php include $view_content; ?>
