@@ -54,6 +54,15 @@ function down($migration_file_name)
     echo "down\n";
 }
 
+function create_migration($name)
+{
+    $dir_path = __DIR__ . "/database/migrations/";
+    $model = "$dir_path.migration_model.php";
+    $new = $dir_path . date("YmdHis") . "_$name.php";
+    copy($model, $new);
+    echo "Migration $new created successfully \n";
+}
+
 function connect()
 {
     try {
