@@ -2,9 +2,8 @@
 
 namespace Controllers;
 
-use Core\Response;
-use Core\Session;
-use Core\View;
+use Core\Helper\Session;
+use Core\Helper\View;
 
 class HomeController
 {

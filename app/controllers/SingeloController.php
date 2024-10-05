@@ -2,8 +2,8 @@
 
 namespace Controllers;
 
-use Core\Request;
-use Core\View;
+use Core\Helper\Request;
+use Core\Helper\View;
 use Throwable;
 
 class SingeloController

@@ -1,6 +1,6 @@
 <?php
 
-use Core\DB;
+use Core\Helper\DB;
 
 return new class
 {

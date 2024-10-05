@@ -3,8 +3,8 @@
 use Controllers\AuthController;
 use Controllers\HomeController;
 use Core\Exceptions\NotFoundException;
-use Core\Middleware;
-use Core\Router;
+use Core\Middleware\Middleware;
+use Core\Helper\Router;
 
 Router::get("/login", function() {
     AuthController::login();
@@ -18,7 +18,7 @@ Middleware::run(["validateCsrf"], function() {
 
 });
 
-Middleware::run(["checkUserSession"], function() {
+Middleware::run(["checkUserSession", "checkAcl"], function() {
 
     Router::get("/", function() {
         HomeController::index();

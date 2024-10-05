@@ -32,7 +32,7 @@ function rollback($limit = 0)
         $class_mig = include_once $mig_path;
         $class_mig->down();
         removeMigrationLog($mig_file_name);
-        echo $mig_file_name . " rollbacking\n";
+        echo $mig_file_name . " rollbacked\n";
     }
 }
 

@@ -1,4 +1,4 @@
-<?php use Core\Security; ?>
+<?php use Core\Helper\Security; ?>
 <link rel="stylesheet" href="/css/auth/login.css">
 
 <form method="post" action="/login">

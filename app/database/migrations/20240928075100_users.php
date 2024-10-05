@@ -1,6 +1,6 @@
 <?php
 
-use Core\DB;
+use Core\Helper\DB;
 
 return new class {
 
@@ -9,9 +9,11 @@ return new class {
         DB::statement("
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY,
+                id_role INTEGER NOT NULL DEFAULT 2,
                 name TEXT,
                 email TEXT,
-                password TEXT
+                password TEXT,
+                FOREIGN KEY (id_role) REFERENCES acl_roles(id)
             );
         ");
     }

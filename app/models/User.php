@@ -2,8 +2,8 @@
 
 namespace Models;
 
-use Core\DB;
-use Core\Security;
+use Core\Helper\DB;
+use Core\Helper\Security;
 
 class User
 {

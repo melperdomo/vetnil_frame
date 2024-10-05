@@ -3,10 +3,11 @@
 namespace Controllers;
 
 use Core\Exceptions\ClientException;
-use Core\Request;
-use Core\Response;
-use Core\Session;
-use Core\View;
+use Core\Helper\Request;
+use Core\Helper\Response;
+use Core\Helper\Session;
+use Core\Helper\View;
+use Models\Acl;
 use Models\User;
 
 class AuthController
@@ -34,6 +35,7 @@ class AuthController
             throw new ClientException("User not found");
         }
 
+        $user->acl = Acl::getAclByRole($user->id);
         Session::set("user", $user);
         Response::redirect("/");
     }

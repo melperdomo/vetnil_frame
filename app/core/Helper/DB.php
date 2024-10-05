@@ -1,16 +1,14 @@
 <?php
 
-namespace Core;
+namespace Core\Helper;
 
 use PDO;
 
 class DB
 {
-    const DB_PATH = __DIR__ . '/../database/app.db';
-
     public static function connect(): PDO
     {
-        $db_path = __DIR__ . "/../database/app.db";
+        $db_path = __DIR__ . "/../../database/app.db";
         $db = new PDO("sqlite:$db_path");
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
