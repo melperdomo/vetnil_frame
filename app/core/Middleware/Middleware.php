@@ -2,44 +2,17 @@
 
 namespace Core\Middleware;
 
-use Core\Exceptions\SingeloException;
-use Core\Helper\Response;
-use Core\Helper\Security;
-use Core\Helper\Session;
-
 class Middleware
 {
-    public static function run(array $function_names, callable $function_routes)
+    public static function pre()
     {
-        foreach($function_names as $fn_name) {
+        Csrf::validate();
+        Auth::checkUserSession();
+        Auth::checkAcl();
+    }
 
-            if(!method_exists(static::class, $fn_name)) {
-                throw new SingeloException("The requested middleware function doesn't exist", 1002);
-            }
-    
-            static::$fn_name();
-        }
+    public static function pos()
+    {
         
-        $function_routes();
-    }
-
-    public static function validateCsrf()
-    {
-        Security::csrfValidation();
-    }
-
-    public static function checkUserSession()
-    {
-        $user = Session::get("user");
-
-        if(empty($user)) {
-            Response::redirect("/login");
-        }
-    }
-
-    public static function checkAcl()
-    {
-        $user = Session::get("user");
-        dd($user);
     }
 }

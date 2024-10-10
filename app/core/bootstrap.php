@@ -25,3 +25,6 @@ spl_autoload_register(function ($class)
         require_once $file;
     }
 });
+
+session_start();
+$_SESSION['global_counter'] = 0;

@@ -9,23 +9,25 @@ class Security
     public static function csrfInput()
     {
         $csrf_token = bin2hex(random_bytes(32));
-
-        session_start();
-        $_SESSION['csrf_token'] = $csrf_token;
-
+        Session::set("csrf_token", $csrf_token);
         echo "<input type=\"hidden\" name=\"csrf_token\" value=\"$csrf_token\">";
     }
 
     public static function csrfValidation()
     {
-        session_start();
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') return;
+        $_SESSION['global_counter'] += 1;
 
-        if (empty($_SESSION['csrf_token']) || !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])) {
+        if($_SESSION['global_counter'] >= 2) {
+            dd($_SERVER);
+        }
+
+        $session_csrf_token = Session::get("csrf_token");
+
+        if (empty($session_csrf_token) || !hash_equals($session_csrf_token, $_POST['csrf_token'])) {
             throw new NotAllowedException();
         }
 
-        unset($_SESSION['csrf_token']);
+        Session::unset("csrf_token");
     }
 
     public static function hashPassword(string $password): string

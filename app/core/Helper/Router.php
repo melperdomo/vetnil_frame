@@ -2,6 +2,8 @@
 
 namespace Core\Helper;
 
+use Core\Middleware\Middleware;
+
 class Router
 {
     public static function get(string $url, callable $function): void
@@ -29,7 +31,9 @@ class Router
         if(Request::getMethod() !== $method) return;   
         if(Request::getUri() !== $url) return;
 
+        Middleware::pre();
         $function();
+        Middleware::pos();
         exit;
     }
 }
