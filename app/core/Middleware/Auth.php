@@ -28,8 +28,5 @@ class Auth extends Middleware
     {
         $uri = Request::getUri();
         if(!in_array($uri, static::ROUTES)) return;
-
-        $user = Session::get("user");
-        dd($user);
     }
 }

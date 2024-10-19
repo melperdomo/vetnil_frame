@@ -15,12 +15,6 @@ class Security
 
     public static function csrfValidation()
     {
-        $_SESSION['global_counter'] += 1;
-
-        if($_SESSION['global_counter'] >= 2) {
-            dd($_SERVER);
-        }
-
         $session_csrf_token = Session::get("csrf_token");
 
         if (empty($session_csrf_token) || !hash_equals($session_csrf_token, $_POST['csrf_token'])) {
