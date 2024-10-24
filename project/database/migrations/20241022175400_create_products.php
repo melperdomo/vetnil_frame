@@ -18,7 +18,7 @@ return new class
     public function down()
     {
         DB::statement("
-            DROP TABLE IF EXISTS products;
+            DROP TABLE IF EXISTS products
         ");
     }
 };

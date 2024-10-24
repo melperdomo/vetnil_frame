@@ -4,6 +4,7 @@ use App\Controllers\AuthController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\SaleController;
+use App\Controllers\UserController;
 use Core\Exceptions\NotFoundException;
 use Core\Helper\Router;
 
@@ -33,6 +34,10 @@ Router::get("/vendas", function () {
 
 Router::get("/rabbitmq", function () {
     HomeController::rabbitmq();
+});
+
+Router::get("/user", function () {
+    UserController::list();
 });
 
 throw new NotFoundException();
