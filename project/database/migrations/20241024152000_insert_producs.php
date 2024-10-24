@@ -8,10 +8,10 @@ return new class
     {
         DB::statement("
             INSERT INTO products (id, name, image) VALUES
-            (1, 'Ampicilina veterinaria injetavel', 'project/public/imagens/ampicilina-veterinaria-injetavel.png'),
-            (2, 'Aminomix gold', 'project/public/imagens/aminomix-gold.png'),
-            (3, 'Aurivet', 'project/public/imagens/aurivet.png'),
-            (4, 'Organew pet po', 'imagens/organew.png');
+            (1, 'Ampicilina veterinaria injetavel', '/imagens/ampicilina-veterinaria-injetavel.png'),
+            (2, 'Aminomix gold', '/imagens/aminomix-gold.png'),
+            (3, 'Aurivet', '/imagens/aurivet.png'),
+            (4, 'Organew pet po', '/imagens/organew.png');
         ");
     }
 
