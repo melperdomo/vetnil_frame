@@ -1,37 +1,79 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
+:root {
+    --cor1: #FFFFFF;
+    --cor2: #FF0000;
+    --cor3: #770000;
+    --cor4: #009370;
+    --cor5: #FFCB2E;
+}
+
 * {
-    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
-html {
-    font-size: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #444;
+.menu-content {
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(var(--cor2), var(--cor3));
+    color: var(--cor1);  
 }
 
-body {
+.menu-left-header {
+    margin-left: 10%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    white-space: nowrap;
+    font-weight: 400;  
+}
+
+.menu-central-header {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+}
+
+.menu-right-header {
+    text-align: right;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
+    justify-content: center;
 }
 
-body > * {
-    padding: 20px;
+.saudacao-usuario {
+    font-weight: 400;
 }
 
-body > header,
-body > footer {
-    text-align: center;
-    background-color: #444;
-    color: white;
+.saudacao-id {
+    font-size: 0.8em;
+    font-weight: 300;
 }
 
-body > main {
-    flex-grow: 1;
+.menu-item-logo {
+    width: 55%;
 }
 
-body > header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.saudacao-id {
+    color: var(--cor1);
+    font-weight: 300;
+}
+
+.ferradura-esquerda {
+    position: fixed;
+    width: 90px;
+    top: 280px;
+}
+
+.ferradura-direita {
+    position: fixed;
+    right: 0;
+    width: 90px;
 }

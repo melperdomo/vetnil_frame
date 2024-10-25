@@ -3,6 +3,7 @@
 use App\Controllers\AuthController;
 use App\Controllers\HomeController;
 use App\Controllers\UserController;
+use App\Controllers\ProductController;
 use Core\Exceptions\NotFoundException;
 use Core\Helper\Router;
 
@@ -22,8 +23,8 @@ Router::get("/logout", function() {
     AuthController::logout();
 });
 
-Router::get("/user", function(){
-    UserController::list();
+Router::get("/produtos", function(){
+    ProductController::list();
 });
 
 throw new NotFoundException();

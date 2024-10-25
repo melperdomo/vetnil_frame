@@ -6,12 +6,7 @@ return [
         'exceptions/singelo',
         'exceptions/cliente',
     ],
-    'layouts/external' => [
-        'auth/login',
-        'auth/home',
+    'layouts/main' => [
+        'products/list',
     ],
-    'layouts/internal' => [
-        'user/index',
-        'home/index',
-    ]
 ];
