@@ -14,8 +14,4 @@ return [
         'auth/login',
         'auth/home',
     ],
-    'layouts/internal' => [
-        'user/index',
-        'home/index',
-    ]
 ];

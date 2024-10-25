@@ -15,10 +15,4 @@ class User
         $password_is_valid = Security::verifyPassword($password, $user->password);
         return ($password_is_valid) ? $user : null;
     }
-
-    public static function list()
-    {
-        $users = DB::query("SELECT * FROM users");
-        return $users;
-    }
 }
