@@ -70,6 +70,7 @@
           <svg
           xmlns="file:///C:/Users/Melissa%20Perdomo/Documents/front_end/vetnil/imagens/imagens-home/receipt.svg"
         ></svg>
+        
           <p>Cadastres suas vendas através da nota fiscal.</p>
         </div>
 

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
+
+:root {
+    --cor1: #FFFFFF;
+    --cor2: #FF0000;
+    --cor3: #770000;
+    --cor4: #009370;
+    --cor5: #FFCB2E;
+    --cor6: #666;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: var(--cor4);
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+h2 {
+    color: #666;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-right: 120px;
+    margin-left: 120px;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+}
+
+.product-card {
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.product-image {
+    max-width: 100%;
+}
