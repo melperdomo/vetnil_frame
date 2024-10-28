@@ -34,10 +34,11 @@
 }
 
 body {
-    width: 100vw;
     background: linear-gradient(var(--cor2), var(--cor3));
     color: var(--cor4);
     overflow: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 ::-webkit-scrollbar {
@@ -101,6 +102,12 @@ body {
     background: var(--cor1);
     width: 300px;
     height: 350px;
+}
+
+.login-container {
+    background: var(--cor1);
+    width: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -117,4 +124,6 @@ label {
     border-bottom: solid 2px var(--cor4);
     margin-bottom: 10px;
     margin-top: 20px;
+    border-radius: 5%;
+    text-align: center;
 }
