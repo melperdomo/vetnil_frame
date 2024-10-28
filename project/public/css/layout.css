@@ -18,6 +18,15 @@
     padding: 0;
 }
 
+body {
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 .menu-content {
     display: flex;
     width: 100%;
@@ -69,14 +78,14 @@
 
 .ferradura-esquerda {
     position: fixed;
-    width: 90px;
+    width: 70px;
     top: 280px;
 }
 
 .ferradura-direita {
     position: fixed;
     right: 0;
-    width: 90px;
+    width: 70px;
 }
 
 .footer-content {
@@ -87,8 +96,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    margin-top: 5%;
     gap: 10%;
-    margin-top: 10%;
 }
 
 .footer-left-logo {
