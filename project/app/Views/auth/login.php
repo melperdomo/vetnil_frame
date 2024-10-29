@@ -25,23 +25,32 @@ use Core\Helper\Security; ?>
 
     </div>
 
-    <div class="container">
-        <!-- <img src="/images/images-login/elipse.png" alt=""> -->
-        <img class="login-awards" src="/images/images-login/2021-premios-2-vetnil-M.png" alt="prêmios sorte a mil vetnil">
+    <div class="login-container">
+        
+        <div class="awards">
+            <img class="elipse-awards" src="/images/images-login/elipse.png" alt="elipse">
+            <img class="login-awards" src="/images/images-login/2021-premios-2-vetnil-M.png" alt="prêmios sorte a mil vetnil">
+        </div>
 
-        <fieldset class="login-container">
-            <legend><img class="login-logo" src="/images/images-login/2021-logo-vetnil-M.png" alt=""></legend>
+        <div class="user-container">
+            <img class="login-logo" src="/images/images-login/2021-logo-vetnil-M.png" alt="">
 
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required>
+            <label for="email">E-mail
+                <input class="login-item" type="email" name="email" id="email" autocomplete="email" required>
+            </label>
 
-            <label for="email">Senha</label>
-            <input type="password" name="password" id="password" required>
 
-            <button type="">Esqueci a senha</button>
-            <button type="submit">Entrar</button>
-            <button type="">Cadastre-se Agora!</button>
-        </fieldset>
+            <label for="email">Senha
+                <input class="login-item" type="password" name="password" id="password" autocomplete="password" required>
+            </label>
+
+
+            <div class="btn">
+                <button class="btn-password" type="">ESQUECEU A SENHA?</button>
+                <button class="btn-enter" type="submit">ENTRAR</button>
+                <button class="btn-register" type="">CADASTRE-SE AGORA!</button>
+            </div>
+        </div>
 
     </div>
 

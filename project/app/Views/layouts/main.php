@@ -14,28 +14,30 @@
     <div class="menu-content">
 
       <div class="menu-left-header">
-        <a class="menu-item" id="">Como Participar</a>
-        <a class="menu-item" id="">Prêmios</a>
-        <a class="menu-item" id="">Produtos Participantes</a>
+        <a href="" class="menu-link" id="">Como Participar</a>
+        <a href="" class="menu-link" id="">Prêmios</a>
+        <a href="project\app\Views\products\list.php" class="menu-link" id="">Produtos Participantes</a>
       </div>
 
       <div class="menu-central-header">
         <img
-          class="item-logo"
+          class="logo-vetnil"
           id="logo-home"
           src="/images/images-home/2021-logo-vetnil-M.png"
           alt="logo sorte a mil com vetnil" />
       </div>
 
-      <div class="saudacao">
-          <p class="saudacao-usuario">Olá, Walter!</p>
-          <p class="saudacao-id">ID: 123456</p>
-        </div>
-
       <div class="menu-right-header">
-        <a href=""><img src="/images/images-home/user-circle.png" alt=""></a>
-        <a href=""><img src="/images/images-home/bell.png" alt=""></a>
-        <a href=""><img src="/images/images-home/bars.png" alt=""></a>
+        <div class="menu-saudacao">
+            <p class="saudacao-usuario">Olá, Walter!</p>
+            <p class="saudacao-id">ID: 123456</p>
+          </div>
+
+        <div class="menu-icons">
+          <a href=""><img src="/images/images-home/user-circle.png" alt=""></a>
+          <a href=""><img src="/images/images-home/bell.png" alt=""></a>
+          <a href=""><img src="/images/images-home/bars.png" alt=""></a>
+        </div>
       </div>
     </div>
 
@@ -84,24 +86,24 @@
 
     <div class="footer-content">
 
-      <div class="footer-left-logo">
-        <img class="item-logo"
+      <div class="footer-left">
+        <img class="logo-vetnil"
           src="/images/images-home/2021-logo-vetnil-M.png"
           alt="sorte-a-mil-com-vetnil" />
       </div>
 
       <div class="footer-central">
-        <a class="btn-regras" id="">Como Participar</a>
-        <a class="btn-premios" id="">Prêmios</a>
-        <a class="btn-usuario" id="">Minha Conta</a>
-        <a class="btn-vendas" id="">Minhas Vendas</a>
+        <a href="" class="footer-link" id="">Como Participar</a>
+        <a href="" class="footer-link" id="">Prêmios</a>
+        <a href="" class="footer-link" id="">Minha Conta</a>
+        <a href="" class="footer-link" id="">Minhas Vendas</a>
       </div>
 
       <div class="footer-right">
-        <a class="btn-produtos" id=""> Produtos Participantes </a>
-        <a class="btn-raspadinhas" id="">Raspadinhas</a>
-        <a class="btn-regulamento" id="">Regulamento</a>
-        <a class="btn-ajuda" id="">Fale Conosco</a>
+        <a href="" class="footer-link" id="">Produtos Participantes</a>
+        <a href="" class="footer-link" id="">Raspadinhas</a>
+        <a href="" class="footer-link" id="">Regulamento</a>
+        <a href="" class="footer-link" id="">Fale Conosco</a>
       </div>
 
     </div>

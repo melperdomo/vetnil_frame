@@ -32,11 +32,12 @@ body {
     width: 100%;
     height: 75px;
     background: linear-gradient(var(--cor2), var(--cor3));
-    color: var(--cor1);  
+    color: var(--cor1); 
+    justify-content: center;
+    gap: 20px;
 }
 
 .menu-left-header {
-    margin-left: 10%;
     display: flex;
     gap: 30px;
     align-items: center;
@@ -44,14 +45,26 @@ body {
     font-weight: 400;  
 }
 
+.menu-link {
+    color: var(--cor1);
+    text-decoration: none;
+}
+
 .menu-central-header {
     display: flex;
     align-items: flex-start;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .menu-right-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu-saudacao {
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -67,7 +80,14 @@ body {
     font-weight: 300;
 }
 
-.item-logo {
+.menu-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo-vetnil {
     width: 55%;
 }
 
@@ -90,7 +110,6 @@ body {
 
 .footer-content {
     background: linear-gradient(var(--cor2), var(--cor3));
-    color: var(--cor1);
     width: 100%;
     height: 180px;
     display: flex;
@@ -101,7 +120,7 @@ body {
     gap: 10%;
 }
 
-.footer-left-logo {
+.footer-left {
     display: flex;
     justify-content: center;
 }
@@ -116,4 +135,9 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 2em;
+}
+
+.footer-link {
+    color: var(--cor1);
+    text-decoration: none;
 }
