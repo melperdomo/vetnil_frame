@@ -1,7 +1,9 @@
 <?php
 
 use Core\Helper\Security; ?>
+
 <link rel="stylesheet" href="/css/auth/login.css">
+<link rel="stylesheet" href="/css/layout.css">
 
 <form method="post" action="/login">
 
@@ -10,14 +12,14 @@ use Core\Helper\Security; ?>
     <div class="ferraduras">
 
         <img
-            class="ferradura-esquerda"
+            class="ferradura-esquerda-login"
             name="ferradura-esquerda"
             id="iferradura-esquerda"
             src="/images/images-home/2021-elementos-coloridos-vetnil.png"
             alt="ferradura-vetnil" />
 
         <img
-            class="ferradura-direita"
+            class="ferradura-direita-login"
             name="ferradura-direita"
             id="iferradura-direita"
             src="/images/images-home/2021-elementos-coloridos-vetnil.png"
@@ -36,19 +38,18 @@ use Core\Helper\Security; ?>
             <img class="login-logo" src="/images/images-login/2021-logo-vetnil-M.png" alt="">
 
             <label for="email">E-mail
-                <input class="login-item" type="email" name="email" id="email" autocomplete="email" required>
+                <input class="input-item" type="email" name="email" id="email" autocomplete="email" required>
             </label>
 
 
-            <label for="email">Senha
-                <input class="login-item" type="password" name="password" id="password" autocomplete="password" required>
+            <label for="password">Senha
+                <input class="input-item" type="password" name="password" id="password" autocomplete="password" required>
             </label>
-
 
             <div class="btn">
-                <button class="btn-password" type="">ESQUECEU A SENHA?</button>
-                <button class="btn-enter" type="submit">ENTRAR</button>
-                <button class="btn-register" type="">CADASTRE-SE AGORA!</button>
+                <button class="btn-underline" type="">ESQUECEU A SENHA?</button>
+                <button class="btn-green" type="submit">ENTRAR</button>
+                <button class="btn-white" type="">CADASTRE-SE AGORA!</button>
             </div>
         </div>
 

@@ -13,10 +13,10 @@
                 <img
                     class="product-image"
                     src="<?php echo ($product->image) ?>"
-                    alt="<?php echo htmlspecialchars($product->name) ?>">
+                    alt="<?php echo ($product->name) ?>">
 
                 <div class="product-name">
-                    <h2><?php echo htmlspecialchars($product->name) ?></h2>
+                    <h2><?php echo ($product->name) ?></h2>
                 </div>
             </div>
         <?php endforeach ?>
@@ -28,10 +28,10 @@
                 <img
                     class="product-image"
                     src="<?php echo ($product->image) ?>"
-                    alt="<?php echo htmlspecialchars($product->name) ?>">
+                    alt="<?php echo ($product->name) ?>">
 
                 <div class="product-name">
-                    <h2><?php echo htmlspecialchars($product->name) ?></h2>
+                    <h2><?php echo ($product->name) ?></h2>
                 </div>
             </div>
         <?php endforeach ?>
@@ -43,10 +43,10 @@
                 <img
                     class="product-image"
                     src="<?php echo ($product->image) ?>"
-                    alt="<?php echo htmlspecialchars($product->name) ?>">
+                    alt="<?php echo ($product->name) ?>">
 
                 <div class="product-name">
-                    <h2><?php echo htmlspecialchars($product->name) ?></h2>
+                    <h2><?php echo ($product->name) ?></h2>
                 </div>
             </div>
         <?php endforeach ?>

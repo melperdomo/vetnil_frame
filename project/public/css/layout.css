@@ -108,6 +108,48 @@ body {
     width: 70px;
 }
 
+.input-item {
+    margin: 10px;
+    border-style: none;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.btn-underline {
+    margin: 5px;
+    padding: 5px;
+    border-style: none;
+    background-color: var(--cor1);
+    color: var(--cor4);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn-white {
+    width: 260px;
+    background-color: var(--cor1);
+    color: var(--cor4);
+    border: 1px solid var(--cor4);
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn-green {
+    width: 110px;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    border-style: none;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .footer-content {
     background: linear-gradient(var(--cor2), var(--cor3));
     width: 100%;

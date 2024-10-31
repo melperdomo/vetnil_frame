@@ -29,15 +29,16 @@ body {
     display: none;
 }
 
-.ferradura-esquerda {
+.ferradura-esquerda-login {
     position: fixed;
     width: 70px;
     bottom: 0;
 }
 
-.ferradura-direita {
+.ferradura-direita-login {
     position: fixed;
     right: 0;
+    top: 50px;
     width: 70px;
 }
 
@@ -47,8 +48,7 @@ body {
     justify-items: center;
     align-items: center;
     align-content: center;
-    gap: 3%;
-    margin-top: 12%;
+    margin-top: 10%;
     margin-bottom: 10%;
 }
 
@@ -68,6 +68,11 @@ body {
 .login-awards {
     width: 90%;
     position: absolute;
+    transition: 0.6s;
+}
+
+.login-awards:hover {
+    transform: scale(1.05);
 }
 
 .login-logo {
@@ -96,43 +101,4 @@ label {
     border-bottom: solid 2px var(--cor4);
     margin-bottom: 10px;
     margin-top: 20px;
-}
-
-.login-item {
-    margin: 10px;
-    border-style: none;
-}
-
-.btn {
-    margin-top: 20px;
-}
-
-.btn-password {
-    margin: 5px;
-    padding: 5px;
-    border-style: none;
-    background-color: var(--cor1);
-    color: var(--cor4);
-    text-decoration: underline;
-}
-
-.btn-enter {
-    width: 110px;
-    margin: 5px;
-    padding: 5px;
-    background-color: var(--cor4);
-    color: var(--cor1);
-    border-style: none;
-    border-radius: 15px;
-    font-weight: bold;
-}
-
-.btn-register {
-    width: 260px;
-    background-color: var(--cor1);
-    color: var(--cor4);
-    border: 1px solid var(--cor4);
-    border-radius: 20px;
-    margin-top: 30px;
-    padding: 10px;
 }
