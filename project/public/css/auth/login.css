@@ -64,8 +64,8 @@ body {
     justify-items: center;
     align-items: center;
     align-content: center;
-    margin-top: 80px;
-    gap: 70px;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .awards {

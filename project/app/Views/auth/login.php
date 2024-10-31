@@ -1,6 +1,7 @@
 <?php
 
 use Core\Helper\Security; ?>
+
 <link rel="stylesheet" href="/css/auth/login.css">
 <link rel="stylesheet" href="/css/layout.css">
 
@@ -11,14 +12,14 @@ use Core\Helper\Security; ?>
     <div class="ferraduras">
 
         <img
-            class="ferradura-esquerda"
+            class="ferradura-esquerda-login"
             name="ferradura-esquerda"
             id="iferradura-esquerda"
             src="/images/images-home/2021-elementos-coloridos-vetnil.png"
             alt="ferradura-vetnil" />
 
         <img
-            class="ferradura-direita"
+            class="ferradura-direita-login"
             name="ferradura-direita"
             id="iferradura-direita"
             src="/images/images-home/2021-elementos-coloridos-vetnil.png"
