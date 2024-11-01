@@ -26,5 +26,8 @@ spl_autoload_register(function ($class)
     }
 });
 
+require_once __DIR__ . '/../vendor/autoload.php';
+
+\Core\Helper\Env::load();
+
 session_start();
-$_SESSION['global_counter'] = 0;

@@ -28,5 +28,16 @@ services:
     networks:
       - singelo_network
 
+  rabbitmq:
+    build:
+      context: ./docker/rabbitmq
+      dockerfile: rabbitmq.dockerfile
+    container_name: singelo_rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - singelo_network
+
 networks:
   singelo_network:

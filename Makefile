@@ -6,6 +6,8 @@ bash-php:
 	docker exec -it singelo_php bash
 bash-nginx:
 	docker exec -it singelo_nginx bash
+bash-rabbitmq:
+	docker exec -it singelo_rabbitmq bash
 start: run
 stop:
 	docker compose stop
