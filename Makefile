@@ -15,4 +15,4 @@ restart:
 	docker compose restart
 rebuild: down run
 logs: 
-	docker-compose logs
+	docker-compose logs	
