@@ -255,6 +255,8 @@ body {
     font-weight: bold;
     cursor: pointer;
     width: 70px;
+    top: 75px;
+    right: 0;
 }
 
 .input-item {
