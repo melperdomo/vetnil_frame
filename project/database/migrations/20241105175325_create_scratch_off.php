@@ -7,21 +7,20 @@ return new class
     public function up()
     {
         DB::statement("
-            CREATE TABLE IF NOT EXISTS receipt (
+            CREATE TABLE IF NOT EXISTS scratch_off (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            code TEXT NOT NULL,
-            date DATE NOT NULL,
-            id_user INTEGER,
-            FOREIGN KEY (id_user) REFERENCES users(id)
+            id_receipt INTEGER NOT NULL,
+            prize TEXT,
+            luck_number TEXT NOT NULL,
+            FOREIGN KEY (id_receipt) REFERENCES receipt(id)
             );
-
         ");
     }
 
     public function down()
     {
         DB::statement("
-            DROP TABLE IF EXISTS receipt;
+            DROP TABLE IF EXISTS scratch_off;
         ");
     }
 };

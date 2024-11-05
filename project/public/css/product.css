@@ -18,8 +18,8 @@
     padding: 0;
 }
 
-body {
-    overflow: auto; /* Permite a rolagem, mas esconde a barra de rolagem */
+.products-content {
+    margin-top: 5%;
 }
 
 ::-webkit-scrollbar {
