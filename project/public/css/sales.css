@@ -136,6 +136,12 @@ label {
     width: 400px;
 }
 
+.all-sales {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
 .sale {
     padding: 1em;
     border-bottom: 2px solid var(--cor7);
@@ -149,6 +155,10 @@ ul {
 
 .list-name {
     list-style-image: url('images\images-sales\recibo.png');
+}
+
+span {
+    font-weight: bold;
 }
 
 .list-date {

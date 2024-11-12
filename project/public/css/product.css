@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
-
 :root {
     --cor1: #FFFFFF;
     --cor2: #FF0000;
@@ -16,13 +14,7 @@
     font-style: normal;
     margin: 0;
     padding: 0;
-} 
-
-/* .products-content {
-    margin-top: 5%;
-    margin-right: 120px;
-    margin-left: 120px;
-} */
+}
 
 ::-webkit-scrollbar {
     display: none;
