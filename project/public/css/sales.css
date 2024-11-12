@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+:root {
+    --cor1: #FFFFFF;
+    --cor2: #FF0000;
+    --cor3: #770000;
+    --cor4: #009370;
+    --cor5: #FFCB2E;
+    --cor6: #666;
+    --cor7: #CCCCCC;
+}
+
+h3 {
+    color: var(--cor4);
+}
+
+.search-sales {
+    display: flex;
+    gap: 15%;
+    justify-content: center;
+}
+
+.search-conteiner {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+}
+
+.all-sales {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.sale {
+    padding: 1em;
+    border-bottom: 2px solid var(--cor7);
+}
+
+span {
+    font-weight: bold;
+}
+
+.list-date {
+    list-style: none;
+}
+
+.list-price {
+    list-style: none;
+    padding-bottom: 1em;
+}
