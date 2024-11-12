@@ -8,5 +8,6 @@ return [
     ],
     'layouts/main' => [
         'products/list',
+        'sales/list',
     ],
 ];

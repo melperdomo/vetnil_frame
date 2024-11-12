@@ -24,4 +24,4 @@ return new class
             DROP TABLE IF EXISTS receipt;
         ");
     }
-};
+}; 

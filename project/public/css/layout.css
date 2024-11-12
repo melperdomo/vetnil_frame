@@ -26,6 +26,19 @@ body {
     display: none;
 }
 
+h1 {
+    color: var(--cor4);
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.page-content {
+    margin: 5% 120px 0 120px;
+    /* margin-top: 5%;
+    margin-right: 120px;
+    margin-left: 120px; */
+}
 
 .menu-content {
     display: flex;
