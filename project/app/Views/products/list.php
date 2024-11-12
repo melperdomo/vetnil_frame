@@ -29,6 +29,7 @@
                 </div>
             <?php endforeach ?>
         </div>
+
         <div class="products-container">
             <?php foreach ($products as $product): ?>
                 <div class="product-card">
@@ -42,6 +43,7 @@
                 </div>
             <?php endforeach ?>
         </div>
+
         <div class="products-pages-container">
             <a class="products-pages-arrow" href="" target="self"><img class="arrow-icon" src="images\images-home\left-arrow.png" alt="left arrow icon"></a>
             <a class="products-pages-number" href="" target="self">1</a>
