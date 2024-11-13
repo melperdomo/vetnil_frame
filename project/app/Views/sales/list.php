@@ -12,32 +12,60 @@ use App\Utils\Formatter; ?>
 
         <div class="search-conteiner">
             <h3>Filtrar por:</h3>
-            <form class="search">
-                <select name="store" id="store">
-                    <option value="Loja 1">Loja 1</option>
-                    <option value="Loja 1">Loja 1</option>
-                    <option value="Loja 1">Loja 1</option>
-                    <option value="Loja 1">Loja 1</option>
-                </select>
-                <button class="btn-underline">LIMPAR FILTROS</button>
-                <button class="btn-white">FILTRAR</button>
-                <label for="new-sale"> Tem uma nova venda?</label>
+
+            <div class="search-conteiner-store">
+                <form class="search">
+
+                    <label for="store">
+                        Loja
+                        <select class="search-select" name="store" id="store">
+                            <option class="select-item" value="Loja 1">Loja 1</option>
+                            <option class="select-item" value="Loja 1">Loja 1</option>
+                            <option class="select-item" value="Loja 1">Loja 1</option>
+                            <option class="select-item" value="Loja 1">Loja 1</option>
+                        </select>
+                    </label>
+            </div>
+
+            <div class="search-conteiner-date">
+                <label for="date">
+                    Período
+                    <span class="date-span"> de </span><input class="date-item" type="date" name="date" id="date" min="2023-01-01"
+                        max="2023-12-30">
+                    <span class="date-span"> até </span><input class="date-item" type="date" name="date" id="date" min="2023-01-01" 
+                        max="2023-12-30">
+                </label>
+            </div>
+
+                <div class="btn-conteiner">
+                    <button type="reset" class="btn-underline">LIMPAR FILTROS</button>
+                    <button type="submit" class="btn-white">FILTRAR</button>
+                </div>
+                
+                <p class="new-sale">Tem uma nova venda?</p>
                 <button class="btn-green">CADASTRAR NOTA FISCAL</button>
+
             </form>
         </div>
 
-        <div class="all-sales">
+        <div class="search-results">
             <?php foreach ($sales as $sale): ?>
-                <div class="sale">
-                    <ul>
-                        <li class="list-name"><span><?php echo $sale->pname ?></span></li>
-                        <li class="list-date"><?php echo Formatter::date($sale->date) ?></li>
-                        <li class="list-price"><?php echo Formatter::money($sale->value) ?></li>
-                        <li class="list-prize"><span>Raspadinha: </span>
-                            <?php echo ($sale->prize != null) ? Formatter::money($sale->prize) : "Não foi dessa vez! 😢" ?> </li>
-                        <li class="list-luck"><span>Número da sorte: </span> <?php echo $sale->luck_number ?> </li>
-                    </ul>
-                </div>
+            <div class="sale">
+                <ul>
+                    <li class="list-name"><span class="list-sale-span"><?php echo $sale->pname ?></span></li>
+
+                    <li class="list-date"><?php echo Formatter::date($sale->date) ?></li>
+
+                    <li class="list-price"><?php echo Formatter::money($sale->value) ?></li>
+
+                    <li class="list-prize"><span class="list-sale-span">Raspadinha: </span>
+                        <?php echo ($sale->prize != null) ? Formatter::money($sale->prize) : "Não foi dessa vez! 😢" ?>
+                    </li>
+
+                    <li class="list-luck"><span class="list-sale-span">Número da sorte: </span>
+                        <?php echo $sale->luck_number ?> </li>
+                </ul>
+            </div>
             <?php endforeach ?>
         </div>
 

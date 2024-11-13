@@ -2,6 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
 
+@media (max-width: 900px) {
+    .ferradura-esquerda {
+        display: none;
+    }
+    
+    .ferradura-direita {
+        display: none;
+    }
+}
+
 :root {
     --cor1: #FFFFFF;
     --cor2: #FF0000;
@@ -34,10 +44,7 @@ h1 {
 }
 
 .page-content {
-    margin: 5% 120px 0 120px;
-    /* margin-top: 5%;
-    margin-right: 120px;
-    margin-left: 120px; */
+    margin: 5% 100px 0 100px;
 }
 
 .menu-content {
@@ -88,6 +95,7 @@ h1 {
 
 .saudacao-usuario {
     font-weight: 400;
+    color: var(--cor1);
 }
 
 .saudacao-id {

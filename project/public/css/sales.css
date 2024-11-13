@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@media (max-width: 900px) {
+    .search-sales {
+        flex-direction: column;
+        gap: 5%;
+    }
+
+    .search-conteiner {
+        width: 200px;
+    }
+
+    .search-results {
+        width: 200px;
+    }
+}
+
 :root {
     --cor1: #FFFFFF;
     --cor2: #FF0000;
@@ -10,31 +25,115 @@
     --cor7: #CCCCCC;
 }
 
-h3 {
-    color: var(--cor4);
-}
-
 .search-sales {
     display: flex;
-    gap: 15%;
+    gap: 10%;
     justify-content: center;
+    box-sizing: border-box;
+} 
+
+h3 {
+    color: var(--cor4);
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .search-conteiner {
+    height: max-content;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    gap: 20px;
+    width: 400px;
 }
 
-.search {
+.search-conteiner-store {
     display: flex;
     flex-direction: column;
 }
 
-.all-sales {
+label {
+    color: var(--cor4);
+    white-space: nowrap;
+    font-size: 16px;
+    border-bottom: solid 1px var(--cor4);
+    width: 410px;
+    padding: 1px;
+}
+
+.search-select {
+    color: var(--cor6);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px var(--cor4);
+    font-size: 1rem;
+    width: 370px;
+    font-weight: bold;
+}
+
+.search-conteiner-date {
+    display: flex;
+    padding-top: 45px;
+}
+
+.select-item {
+    color: var(--cor6);
+    border: none;
+    gap: 5px;
+    font-size: 1rem;
+}
+
+.date-span {
+    color: var(--cor6);
+}
+
+.date-item {
+    color: var(--cor6);
+    border: none;
+    gap: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-conteiner {
+    margin-top: 30px;
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+}
+
+.btn-underline {
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-white {
+    margin: 0;
+    width: 50%;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.new-sale {
+    color: var(--cor4);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+.btn-green {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.search-results {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    color: var(--cor6);
+    width: 400px;
 }
 
 .sale {
@@ -42,8 +141,14 @@ h3 {
     border-bottom: 2px solid var(--cor7);
 }
 
-span {
-    font-weight: bold;
+ul {
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.list-name {
+    list-style-image: url('images\images-sales\recibo.png');
 }
 
 .list-date {
@@ -53,4 +158,8 @@ span {
 .list-price {
     list-style: none;
     padding-bottom: 1em;
+}
+
+.list-sale-span {
+    font-weight: bold;
 }
