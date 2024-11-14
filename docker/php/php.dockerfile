@@ -14,8 +14,7 @@ RUN install-php-extensions curl zip sqlite3 mbstring xml pgsql pdo_pgsql intl xd
 
 # XDebug Log
 RUN touch /var/log/xdebug.log
-RUN chown php:php /var/log/xdebug.log
-RUN chmod 664 /var/log/xdebug.log
+RUN chmod 777 /var/log/xdebug.log
 
 # Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"

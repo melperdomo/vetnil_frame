@@ -3,34 +3,31 @@
 namespace Core\Helper;
 
 use PDO;
-use Core\Helper\Env;
 
 class DB
 {
     public static function connect(): PDO
     {
-        $host = Env::get('DB_HOST');
-        $user = Env::get('DB_USER');
-        $password = Env::get('DB_PASSWORD');
-        $dbname = Env::get('DB_DATABASE');
+        $db_path = __DIR__ . "/../../database/app.db";
+        $db = new PDO("sqlite:$db_path");
+        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        return $pdo;
+        return $db;
     }
 
     public static function statement(string $sql): void
     {
-        $pdo = static::connect();
-        $pdo->exec($sql);
+        $db = static::connect();
+        $db->exec($sql);
+        $db = null;
     }
 
     public static function query(string $sql, array $params = []): array
     {
-        $pdo = static::connect();
-        $stmt = $pdo->prepare($sql);
+        $db = static::connect();
+        $stmt = $db->prepare($sql);
         $stmt->execute($params);
+        $db = null;
 
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }

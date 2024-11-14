@@ -8,7 +8,7 @@ return new class
     {
         DB::statement("
             CREATE TABLE IF NOT EXISTS acl_roles (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER PRIMARY KEY,
                 name TEXT NOT NULL,
                 description TEXT,
                 active INTEGER NOT NULL DEFAULT 1
@@ -17,14 +17,14 @@ return new class
 
         DB::statement("
             CREATE TABLE IF NOT EXISTS acl_resources (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                id INTEGER PRIMARY KEY,
                 path TEXT NOT NULL,
                 description TEXT
             );
         ");
 
         DB::statement("
-            CREATE TABLE acl_privileges (
+            CREATE TABLE IF NOT EXISTS acl_privileges (
                 id_role INTEGER NOT NULL,
                 id_resource INTEGER NOT NULL,
                 allow INTEGER NOT NULL DEFAULT 1,

@@ -1,6 +1,20 @@
 <?php
 
 include __DIR__ . '/core/bootstrap.php';
+use Core\Helper\DB;
+
+connect();
+
+function connect()
+{
+    $pdo = DB::connect();
+    $pdo->exec("
+        CREATE TABLE IF NOT EXISTS migrations (
+            name TEXT, 
+            datetime TEXT
+        );
+    ");
+}
 
 function migrate()
 {
@@ -63,44 +77,13 @@ function create_migration($name)
     echo "Migration $new created successfully \n";
 }
 
-function connect()
-{
-    try {
-        $db_path = __DIR__ . "/database/app.db";
-        $db = new PDO("sqlite:$db_path");
-        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        $db->exec("
-            CREATE TABLE IF NOT EXISTS migrations (
-                name TEXT, 
-                datetime TEXT
-            );
-        ");
-
-        return $db;
-    } catch (PDOException $e) {
-        echo "ERROR: " . $e->getMessage();
-    }
-}
-
 function getDBMigrations($limit = 0, $sorting = 'ASC')
 {
-    $list = [];
-    $db = connect();
-
-    $sql = "
+    $list = DB::query("
         SELECT name FROM migrations
         ORDER BY datetime $sorting
-    ";
-    if($limit) $sql .= " LIMIT $limit";
+    ");
 
-    $stmt = $db->query($sql);
-
-    while ($name = $stmt->fetchColumn(0)) {
-        $list[] = $name;
-    }
-
-    $db = null;
     return $list;
 }
 
@@ -119,26 +102,20 @@ function getFileMigrations()
 
 function insertMigrationLog($mig_file_name)
 {
-    $db = connect();
     $now = date('Y-m-d H:i:s');
 
-    $db->exec("
+    DB::statement("
         INSERT INTO migrations (name, datetime) 
         VALUES ('$mig_file_name', '$now');
     ");
-
-    $db = null;
 }
 
 function removeMigrationLog($mig_file_name)
 {
-    $db = connect();
-
-    $db->exec("
-        DELETE FROM migrations WHERE name = '$mig_file_name';
+    DB::statement("
+        DELETE FROM migrations
+        WHERE name = '$mig_file_name';
     ");
-
-    $db = null;
 }
 
 if (php_sapi_name() == 'cli') {
