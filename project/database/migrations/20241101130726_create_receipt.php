@@ -8,10 +8,10 @@ return new class
     {
         DB::statement("
             CREATE TABLE IF NOT EXISTS receipt (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            id SERIAL PRIMARY KEY,
             code TEXT NOT NULL,
             date DATE NOT NULL,
-            id_user INTEGER,
+            id_user INT,
             FOREIGN KEY (id_user) REFERENCES users(id)
             );
 

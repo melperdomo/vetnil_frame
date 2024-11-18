@@ -8,9 +8,9 @@ return new class
     {
         DB::statement("
             CREATE TABLE IF NOT EXISTS receipt_product (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            id_receipt INTEGER NOT NULL,
-            id_product INTEGER NOT NULL,
+            id SERIAL PRIMARY KEY,
+            id_receipt INT NOT NULL,
+            id_product INT NOT NULL,
             value REAL NOT NULL,
             FOREIGN KEY (id_receipt) REFERENCES receipt(id),
             FOREIGN KEY (id_product) REFERENCES products(id)

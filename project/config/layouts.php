@@ -10,8 +10,4 @@ return [
         'products/list',
         'sales/list',
     ],
-    'layouts/external' => [
-        'auth/login',
-        'auth/home',
-    ],
 ];

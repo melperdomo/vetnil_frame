@@ -10,7 +10,7 @@ class Sale
     {
         $sales = DB::query(
             "SELECT
-                products.name AS 'pname',
+                products.name AS \"pname\",
                 receipt.date,
                 receipt_product.value,
                 scratch_off.prize,

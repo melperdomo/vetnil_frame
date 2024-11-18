@@ -8,12 +8,14 @@ return new class {
     {
         DB::statement("
             CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY,
-                id_role INTEGER NOT NULL DEFAULT 2,
+             id SERIAL PRIMARY KEY,
+                id_role INT NOT NULL DEFAULT 2,
+                id_store INT,
                 name TEXT,
                 email TEXT,
                 password TEXT,
-                FOREIGN KEY (id_role) REFERENCES acl_roles(id)
+                FOREIGN KEY (id_role) REFERENCES acl_roles(id),
+                FOREIGN KEY (id_store) REFERENCES stores(id)
             );
         ");
     }

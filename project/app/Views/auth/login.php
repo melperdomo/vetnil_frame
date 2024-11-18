@@ -2,8 +2,8 @@
 
 use Core\Helper\Security; ?>
 
-<link rel="stylesheet" href="/css/auth/login.css">
 <link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/auth/login.css">
 
 <form method="post" action="/login">
 

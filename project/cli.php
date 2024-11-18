@@ -38,8 +38,8 @@ function rollback($limit = 0)
 {
     $done_migs = getDBMigrations($limit, 'DESC');
     
-    foreach($done_migs as $mig_name) {
-        $mig_path = __DIR__ . "/database/migrations/$mig_name";
+    foreach($done_migs as $mig) {
+        $mig_path = __DIR__ . "/database/migrations/$mig->name";
         $mig_file_name = basename($mig_path);
 
         echo $mig_file_name . " rollbacking\n";

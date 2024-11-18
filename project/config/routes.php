@@ -4,8 +4,6 @@ use App\Controllers\AuthController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\SaleController;
-use App\Controllers\UserController;
-use App\Controllers\ProductController;
 use Core\Exceptions\NotFoundException;
 use Core\Helper\Router;
 
