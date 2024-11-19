@@ -45,7 +45,7 @@ body {
     display: none;
 }
 
-.ferradura-esquerda-login {
+/* .ferradura-esquerda-login {
     position: fixed;
     width: 70px;
     bottom: 0;
@@ -80,7 +80,7 @@ body {
 .elipse-awards {
     width: 375px;
     position: absolute;
-}
+} */
 
 .login-awards {
     width: 700px;

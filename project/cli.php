@@ -84,7 +84,12 @@ function getDBMigrations($limit = 0, $sorting = 'ASC')
         ORDER BY datetime $sorting
     ");
 
-    return $list;
+    $names = [];
+    foreach ($list as $item) {
+        $names[] = $item->name;
+    }
+
+    return $names;
 }
 
 function getFileMigrations()

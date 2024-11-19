@@ -13,35 +13,37 @@ use App\Utils\Formatter; ?>
         <div class="search-conteiner">
             <h3>Filtrar por:</h3>
 
-            <div class="search-conteiner-store">
-                <form class="search">
+            <form class="search">
+                <div class="search-conteiner-product">
 
-                    <label for="store">
-                        Loja
-                        <select class="search-select" name="store" id="store">
-                            <option class="select-item" value="Loja 1">Loja 1</option>
-                            <option class="select-item" value="Loja 1">Loja 1</option>
-                            <option class="select-item" value="Loja 1">Loja 1</option>
-                            <option class="select-item" value="Loja 1">Loja 1</option>
+                    <label for="product">
+                        Produto
+                        <select class="store-select" name="id_product" id="id_product">
+                            <option value=""></option>
+                            <?php foreach ($products as $product): ?>
+                            <option class="selected-item" value=" <?php echo $product->id ?> ">
+                                <?php echo $product->name ?>
+                            </option>
+                            <?php endforeach ?>
                         </select>
                     </label>
-            </div>
+                </div>
 
-            <div class="search-conteiner-date">
-                <label for="date">
-                    Período
-                    <span class="date-span"> de </span><input class="date-item" type="date" name="date" id="date" min="2023-01-01"
-                        max="2023-12-30">
-                    <span class="date-span"> até </span><input class="date-item" type="date" name="date" id="date" min="2023-01-01" 
-                        max="2023-12-30">
-                </label>
-            </div>
+                <div class="search-conteiner-date">
+                    <label for="date">
+                        Período
+                        <span class="date-span"> de </span><input class="date-item" type="date" name="date" id="date"
+                            min="2023-01-01" max="2023-12-30">
+                        <span class="date-span"> até </span><input class="date-item" type="date" name="date" id="date"
+                            min="2023-01-01" max="2023-12-30">
+                    </label>
+                </div>
 
                 <div class="btn-conteiner">
                     <button type="reset" class="btn-underline">LIMPAR FILTROS</button>
                     <button type="submit" class="btn-white">FILTRAR</button>
                 </div>
-                
+
                 <p class="new-sale">Tem uma nova venda?</p>
                 <button class="btn-green">CADASTRAR NOTA FISCAL</button>
 

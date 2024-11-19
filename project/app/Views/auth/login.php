@@ -9,7 +9,7 @@ use Core\Helper\Security; ?>
 
     <?php Security::csrfInput(); ?>
 
-    <div class="ferraduras">
+    <!-- <div class="ferraduras">
 
         <img
             class="ferradura-esquerda-login"
@@ -32,10 +32,10 @@ use Core\Helper\Security; ?>
         <div class="awards">
             <img class="elipse-awards" src="/images/images-login/elipse.png" alt="elipse">
             <img class="login-awards" src="/images/images-login/2021-premios-2-vetnil-M.png" alt="prêmios sorte a mil vetnil">
-        </div>
+        </div> -->
 
         <div class="user-container">
-            <img class="login-logo" src="/images/images-login/2021-logo-vetnil-M.png" alt="">
+            <!-- <img class="login-logo" src="/images/images-login/2021-logo-vetnil-M.png" alt=""> -->
 
             <label for="email">E-mail
                 <input class="input-item" type="email" name="email" id="email" autocomplete="email" required>
@@ -53,6 +53,6 @@ use Core\Helper\Security; ?>
             </div>
         </div>
 
-    </div>
+    <!-- </div> -->
 
 </form>
