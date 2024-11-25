@@ -10,10 +10,12 @@ class Sale
 {
     public static function list()
     {
+        $min_date_receipt = Request::get('min_date_receipt');
+        $max_date_receipt = Request::get('max_date_receipt');
         $id_product = Request::get('id_product');
         $user = Session::get('user');
-        $string_sql =
-            "SELECT
+        $string_sql = "
+            SELECT
                 products.name AS \"pname\",
                 receipt.date,
                 receipt_product.value,
@@ -31,10 +33,21 @@ class Sale
                 receipt.id_user = $user->id
         ";
 
-        if ($id_product != NULL ) {
-            $string_sql .= 
-            "
-                AND receipt_product.id_product = $id_product
+        if ($id_product != NULL) {
+            $string_sql .= "
+                AND receipt_product.id_product = $id_product   
+            ";
+        }
+
+        if ($min_date_receipt != NULL) {
+            $string_sql .= "
+                AND receipt.date >= '$min_date_receipt'
+            ";
+        }
+
+        if ($max_date_receipt != NULL) {
+            $string_sql .= "
+                AND receipt.date <= '$max_date_receipt'
             ";
         }
 

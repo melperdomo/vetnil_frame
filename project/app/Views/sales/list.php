@@ -1,6 +1,9 @@
 <?php
 
-use App\Utils\Formatter; ?>
+use App\Utils\Formatter;
+use Core\Helper\Request;
+
+?>
 
 <link rel="stylesheet" href="/css/layout.css" />
 <link rel="stylesheet" href="/css/sales.css" />
@@ -18,13 +21,15 @@ use App\Utils\Formatter; ?>
 
                     <label for="product">
                         Produto
-                        <select class="store-select" name="id_product" id="id_product">
-                            <option value=""></option>
+                        <select class="select-item" name="id_product" id="id_product">
+                            <option class="select-item" value=""></option>
+                            
                             <?php foreach ($products as $product): ?>
-                            <option class="selected-item" value=" <?php echo $product->id ?> ">
+                            <option class="select-item" value="<?php echo $product->id ?>" <?php if ($product->id == Request::get('id_product')) echo "selected" ?>>
                                 <?php echo $product->name ?>
                             </option>
                             <?php endforeach ?>
+
                         </select>
                     </label>
                 </div>
@@ -32,10 +37,11 @@ use App\Utils\Formatter; ?>
                 <div class="search-conteiner-date">
                     <label for="date">
                         Período
-                        <span class="date-span"> de </span><input class="date-item" type="date" name="date" id="date"
-                            min="2023-01-01" max="2023-12-30">
-                        <span class="date-span"> até </span><input class="date-item" type="date" name="date" id="date"
-                            min="2023-01-01" max="2023-12-30">
+                        <span class="date-span"> de </span><input class="date-item" type="date" name="min_date_receipt" id="min_date_receipt"
+                            min="2023-01-01" max="2023-01-30" value="<?php echo Request::get('min_date_receipt') ?>">
+                            
+                        <span class="date-span"> até </span><input class="date-item" type="date" name="max_date_receipt" id="max_date_receipt"
+                            min="2023-01-01" max="2023-01-30" value="<?php echo Request::get('max_date_receipt') ?>">
                     </label>
                 </div>
 

@@ -52,15 +52,6 @@ h3 {
     flex-direction: column;
 }
 
-label {
-    color: var(--cor4);
-    white-space: nowrap;
-    font-size: 16px;
-    border-bottom: solid 1px var(--cor4);
-    width: 410px;
-    padding: 1px;
-}
-
 .search-select {
     color: var(--cor6);
     border-top: none;
@@ -120,7 +111,7 @@ label {
     color: var(--cor4);
     font-weight: bold;
     font-size: 1.2rem;
-    margin-top: 50px;
+    margin: 50px;
 }
 
 .btn-green {

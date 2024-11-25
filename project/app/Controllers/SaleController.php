@@ -11,6 +11,7 @@ class SaleController {
     {
         $products = Product::list();
         $sales = Sale::list();
+        
         View::render("sales/list", [
             "sales" => $sales,
             "products" => $products,
