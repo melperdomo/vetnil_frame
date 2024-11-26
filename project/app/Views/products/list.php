@@ -44,12 +44,6 @@
             <?php endforeach ?>
         </div>
 
-        <div class="products-pages-container">
-            <a class="products-pages-arrow" href="" target="self"><img class="arrow-icon" src="images\images-home\left-arrow.png" alt="left arrow icon"></a>
-            <a class="products-pages-number" href="" target="self">1</a>
-            <a class="products-pages-number" href="" target="self">2</a>
-            <a class="products-pages-number" href="" target="self">3</a>
-            <a class="products-pages-arrow" href="" target="self"><img class="arrow-icon" src="images\images-home\right-arrow.png" alt="right arrow icon"></a>
-        </div>
+        <!-- <?php $paginator->render() ?> -->
     
     </div>

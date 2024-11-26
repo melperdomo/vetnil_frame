@@ -54,10 +54,23 @@ use Core\Helper\Request;
                 <button class="btn-green">CADASTRAR NOTA FISCAL</button>
 
             </form>
+
+            <div class="prizes-conteiner">
+                <img src="" alt="">
+                <p>Você já ganhou <span>
+                    <?php echo Formatter::money($prize)?>
+                </span> em prêmios instantâneos.</p>
+
+                <img src="" alt="">
+                <p>Você possui <span>
+                    <?php echo $luck_numbers?>
+                </span> números da sorte.</p>
+            </div>
+
         </div>
 
         <div class="search-results">
-            <?php foreach ($sales as $sale): ?>
+            <?php foreach ($paginator->results as $sale): ?>
             <div class="sale">
                 <ul>
                     <li class="list-name"><span class="list-sale-span"><?php echo $sale->pname ?></span></li>
@@ -75,6 +88,7 @@ use Core\Helper\Request;
                 </ul>
             </div>
             <?php endforeach ?>
+            <?php $paginator->render() ?>
         </div>
 
     </div>

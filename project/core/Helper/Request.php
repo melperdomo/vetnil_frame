@@ -10,6 +10,10 @@ class Request
             return $_GET[$key];
         }
 
+        if(!empty($key) && key_exists($key, $_GET) == false) {
+            return NULL;
+        }
+
         return $_GET;
     }
 

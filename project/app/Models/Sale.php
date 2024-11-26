@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use Core\Helper\DB;
 use Core\Helper\Request;
 use Core\Helper\Session;
 
@@ -51,7 +50,6 @@ class Sale
             ";
         }
 
-        $sales = DB::query($string_sql);
-        return $sales;
+        return $string_sql;
     }
 }
