@@ -19,6 +19,10 @@ class Request
             return $_POST[$key];
         }
 
+        if(key_exists($key, $_POST) == false) {
+            return null;
+        }
+
         return $_POST;
     }
 

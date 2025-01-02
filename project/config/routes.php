@@ -4,6 +4,7 @@ use App\Controllers\AuthController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\SaleController;
+use App\Controllers\UserController;
 use Core\Exceptions\NotFoundException;
 use Core\Helper\Router;
 
@@ -37,6 +38,14 @@ Router::get("/rabbitmq", function () {
 
 Router::get("/produtos", function () {
     ProductController::list();
+});
+
+Router::get("/cadastro", function () {
+    UserController::register();
+});
+
+Router::post("/cadastro", function () {
+    UserController::doRegister();
 });
 
 throw new NotFoundException();
