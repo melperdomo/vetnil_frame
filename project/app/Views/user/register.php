@@ -20,14 +20,15 @@ use Core\Helper\Security;
             </label>
 
             <label for="cpf">CPF
-                <input type="number" name="cpf" id="cpf">
+                <input type="text" name="cpf" id="cpf">
             </label>
 
             <label for="store">Loja
-                <select>
+                <select name="id_store">
                     <option class="select-item" value=""></option>
                     <?php foreach ($stores as $store):?>
-                        <option class="select-item" value=" <?php echo $store->id ?>" <?php if ($store->id == Request::get('id_store')) echo "selected" ?>> <?php echo $store->name ?>
+                        <option  class="select-item" value=" <?php echo $store->id ?>" <?php if ($store->id == Request::get('id_store')) echo "selected" ?>>
+                            <?php echo $store->name ?>
                         </option>
                         <?php endforeach ?>
                 </select>

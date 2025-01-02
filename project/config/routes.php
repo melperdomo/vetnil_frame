@@ -3,6 +3,7 @@
 use App\Controllers\AuthController;
 use App\Controllers\HomeController;
 use App\Controllers\ProductController;
+use App\Controllers\ReceiptController;
 use App\Controllers\SaleController;
 use App\Controllers\UserController;
 use Core\Exceptions\NotFoundException;
@@ -45,7 +46,15 @@ Router::get("/cadastro", function () {
 });
 
 Router::post("/cadastro", function () {
-    UserController::doRegister();
+    UserController::userRegister();
+});
+
+Router::get("/cupomfiscal", function () {
+    ReceiptController::receipt();
+});
+
+Router::post("/cupomfiscal", function () {
+    ReceiptController::receiptRegister();
 });
 
 throw new NotFoundException();

@@ -15,4 +15,12 @@ class User
         $password_is_valid = Security::verifyPassword($password, $user->password);
         return ($password_is_valid) ? $user : null;
     }
+
+    public static function doRegister(string $name, string $cpf, int $store, string $email, string $tel, string $password)
+    {
+        DB::statement("
+        INSERT INTO users (name, cpf, id_store, email, tel, password)
+        VALUES ('$name', '$cpf', '$store', '$email', '$tel', '$password')
+        ");
+    }
 }

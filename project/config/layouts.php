@@ -9,5 +9,7 @@ return [
     'layouts/main' => [
         'products/list',
         'sales/list',
+        'user/register',
+        'receipt/register',
     ],
 ];
