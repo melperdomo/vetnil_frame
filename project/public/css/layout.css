@@ -232,8 +232,6 @@ label {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    position: fixed;
-    top: 0;
 }
 
 .flex-paginator .buttons-page.disabled > * {
