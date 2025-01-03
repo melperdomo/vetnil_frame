@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 @media (max-width: 900px) {
     .search-sales {
         flex-direction: column;
@@ -13,16 +11,6 @@
     .search-results {
         width: 200px;
     }
-}
-
-:root {
-    --cor1: #FFFFFF;
-    --cor2: #FF0000;
-    --cor3: #770000;
-    --cor4: #009370;
-    --cor5: #FFCB2E;
-    --cor6: #666;
-    --cor7: #CCCCCC;
 }
 
 .search-sales {

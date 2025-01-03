@@ -11,5 +11,6 @@ return [
         'sales/list',
         'user/register',
         'receipt/register',
+        'scratch_off/prize',
     ],
 ];

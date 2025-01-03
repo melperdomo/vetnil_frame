@@ -23,14 +23,11 @@ class ReceiptController
 
     public static function receiptRegister()
     {
-        $cnpj = Request::post("cnpj");
         $code = Request::post("code");
         $receipt_date = Request::post("receipt_date");
-        $product = Request::post("id_product");
-        $value = Request::post("value");
-        dd($cnpj, $code, $receipt_date, $product, $value);
-        
-        Receipt::doRegister($cnpj, $code, $receipt_date, $product, $value);
-        Response::redirect("/vendas");
+        $products = Request::post("products");
+
+        Receipt::registerSale($code, $receipt_date, $products);
+        Response::redirect("/raspadinha");
     }
 }
