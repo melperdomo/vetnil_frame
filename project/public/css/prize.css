@@ -1,2 +1,24 @@
 @charset "UTF-8";
 
+.prize-conteiner {
+    display: flex;
+}
+
+.prize-conteiner-row {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 100px;
+}
+
+.prize-conteiner-card.green {
+    background-color: var(--cor4);
+    width: 100px;
+    height: 100px;
+}
+
+.prize-conteiner-card.red {
+    background-color: var(--cor2);
+    width: 100px;
+    height: 100px;
+}

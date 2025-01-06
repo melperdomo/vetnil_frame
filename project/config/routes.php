@@ -5,7 +5,7 @@ use App\Controllers\HomeController;
 use App\Controllers\ProductController;
 use App\Controllers\ReceiptController;
 use App\Controllers\SaleController;
-use App\Controllers\ScratchOffController;
+use App\Controllers\PrizeController;
 use App\Controllers\UserController;
 use Core\Exceptions\NotFoundException;
 use Core\Helper\Router;
@@ -58,8 +58,8 @@ Router::post("/cupomfiscal", function () {
     ReceiptController::receiptRegister();
 });
 
-Router::get("/raspadinha", function() {
-    ScratchOffController::generatePrize();
+Router::get("/sorte", function () {
+    PrizeController::generatePrize();
 });
 
 throw new NotFoundException();

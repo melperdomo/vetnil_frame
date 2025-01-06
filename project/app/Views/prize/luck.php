@@ -1,10 +1,11 @@
 <link rel="stylesheet" href="/css/prize.css" />
 
 <div class="page-content">
-    <h1>Raspadinha</h1>
+    <h1>Tente a Sorte</h1>
     <div id="prize-conteiner">
         <div class="prize-conteiner-row">
             <div class="prize-conteiner-card green">
+                <img src="/images/" alt="">
             </div>
             <div class="prize-conteiner-card red">
             </div>

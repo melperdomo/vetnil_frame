@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class ScratchOffController 
+class PrizeController 
 {
     public static function generatePrize() 
     {
